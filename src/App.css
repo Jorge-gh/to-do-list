@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    outline: none;
+    box-sizing: border-box;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100svh;
+    gap: 50px;
+    padding: 30px;
+    background: url(./background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.conAñadir input{
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid rgb(205, 205, 205);
+    border-right: none;
+
+}
+
+.conAñadir button{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: solid 2px #133E87;
+    border-left: none;
+    background-color: #133E87;
+    color: white;
+    text-transform: uppercase;
+}
+
+.conAñadir input, .conAñadir button{
+    padding: 15px 20px;
+}
+
+.conTareas{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.divTarea{
+    display: flex;
+    width: 500px;
+    height: 50px;
+    justify-content: space-between;
+    border-radius: 5px;
+    transition: background .5s ease-out;
+    background-color: floralwhite;
+}
+
+.divTarea button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 15px 20px;
+
+}
+
+.divTarea button img{
+    width: 27px;
+}
+
+.divInput{
+    padding: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+}
+
+.checkInput{
+    appearance: none;
+    border: 2px solid #999;
+    background-color: white;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.checkInput:checked {
+    background-color: #3498db;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.divTarea:has(.checkInput:checked){
+    background-color: #6fb7e7;
+}
+
+.divTarea:has(button:hover){
+    background-color: red !important;
+    color: white;
+
+    animation: movimiento 0.5s infinite;
+}
+
+@keyframes movimiento{
+
+    25%{
+        transform: rotate(1deg);
+    }
+
+    75%{
+        transform: rotate(-1deg);
+    }
+}
